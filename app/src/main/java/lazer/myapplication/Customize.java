@@ -2,7 +2,6 @@ package lazer.myapplication;
 
 
 import android.app.Activity;
-import android.app.usage.UsageEvents;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
