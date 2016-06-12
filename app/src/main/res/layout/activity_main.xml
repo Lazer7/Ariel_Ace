@@ -62,8 +62,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Option"
-        android:id="@+id/Option"
+        android:text="Customize"
+        android:id="@+id/Customize"
         android:width="200dp"
         android:height="50dp"
         android:layout_alignParentBottom="true"
@@ -74,12 +74,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Customize"
-        android:id="@+id/Customize"
+        android:text="Option"
+        android:id="@+id/OptionMenu"
         android:layout_marginBottom="29dp"
         android:height="50dp"
         android:width="200dp"
-        android:layout_above="@+id/Option"
+        android:layout_above="@+id/Customize"
         android:layout_centerHorizontal="true"
         android:background="#3b51d1" />
 
