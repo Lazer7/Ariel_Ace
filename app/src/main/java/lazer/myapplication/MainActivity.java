@@ -9,6 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+/**
+ * Jimmy Chao
+ * Project 0
+ * Team Lazer
+ */
 
 public class MainActivity extends Activity {
     Button Play;
@@ -121,7 +126,7 @@ public class MainActivity extends Activity {
         Customization = (Button) findViewById(R.id.Customize);
         Option = (Button) findViewById(R.id.OptionMenu);
         optionmenu=false;
-
+        System.out.println("Setting Buttons");
 
         Customization.setOnClickListener(new View.OnClickListener()
         {
