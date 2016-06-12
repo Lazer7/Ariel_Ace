@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OptionMenu"
+    android:background="#8b2424"
+    >
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Options"
+            android:layout_alignBottom="@+id/Musicswitch1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="59dp"
+            android:textSize="50dp"
+            android:id="@+id/textView2" />
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music"
+            android:id="@+id/Musicswitch1"
+            android:layout_marginTop="125dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="30dp"
+            android:background="#706ecb"
+            android:checked="true"
+            android:clickable="true"
+            android:enabled="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exitButton"
+            android:background="@drawable/button"
+            android:width="10dp"
+            android:height="10dp"
+            android:longClickable="true"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+</FrameLayout>
