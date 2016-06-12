@@ -62,26 +62,26 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option"
-            android:id="@+id/Option"
-            android:width="200dp"
-            android:height="50dp"
-            android:background="#3b51d1"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/Play"
-            android:layout_alignStart="@+id/Play" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="Customize"
             android:id="@+id/Customize"
-            android:height="50dp"
             android:width="200dp"
+            android:height="50dp"
             android:background="#3b51d1"
             android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/Play"
             android:layout_alignEnd="@+id/Play" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option"
+            android:id="@+id/OptionMenu"
+            android:height="50dp"
+            android:width="200dp"
+            android:background="#3b51d1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/Play"
+            android:layout_alignStart="@+id/Play" />
 
     </RelativeLayout>
 </RelativeLayout>
