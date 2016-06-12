@@ -19,8 +19,8 @@ public class MainActivity extends Activity {
     Button Play;
     Button Customization;
     Button Option;
-    boolean optionmenu;
-    OptionMenu custom2;
+    boolean CustomizationSelected;
+    OptionMenu OptionMenu;
     RelativeLayout Main;
     /**
      * On create lifecycle for the Main Menu
@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        custom2=  new OptionMenu();
+        OptionMenu =  new OptionMenu();
         setButtons();
     }
 
@@ -75,14 +75,14 @@ public class MainActivity extends Activity {
         System.out.println("onStop");
         //checks to see if option button has been selected
         //this shows that the user has enter the option menu
-        if(!optionmenu)
+        if(!CustomizationSelected)
         {
             //if option menu has not been selected
             //then stop service
             stopService(new Intent((this), MyService.class));
         }
         //set option menu to false to reset the check
-        optionmenu=false;
+        CustomizationSelected =false;
 
     }
 
@@ -125,14 +125,12 @@ public class MainActivity extends Activity {
         Play=(Button) findViewById(R.id.Play);
         Customization = (Button) findViewById(R.id.Customize);
         Option = (Button) findViewById(R.id.OptionMenu);
-        optionmenu=false;
-        System.out.println("Setting Buttons");
-
+        CustomizationSelected =false;
         Customization.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view)
             {
-                optionmenu=true;
+                CustomizationSelected =true;
                 Intent option = new Intent(MainActivity.this, lazer.myapplication.Customize.class);
                 startActivity(option);
 
@@ -148,7 +146,7 @@ public class MainActivity extends Activity {
                 //Create the OptionMenu option Fragment menu
                 FragmentTransaction fragmentTransaction= getFragmentManager().beginTransaction();
                 //Use this tool to get fragment layout
-                fragmentTransaction.replace(R.id.fragment_container,custom2);
+                fragmentTransaction.replace(R.id.fragment_container, OptionMenu);
                 //show the fragment
                 fragmentTransaction.commit();
                 //Get the fragment layout

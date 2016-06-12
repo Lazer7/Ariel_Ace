@@ -1,64 +1,62 @@
 package lazer.myapplication;
 
+
+import android.app.Activity;
+import android.app.usage.UsageEvents;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Switch;
+import android.view.KeyEvent;
+
 
 /**
  * Ignore this class
  * This activity will be resolved soon
  */
-public class Customize extends AppCompatActivity {
-    static Switch musicoption;
-    static boolean musicON=true;
+public class Customize extends Activity {
+    boolean continueservice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.customization);
-        musicoption =(Switch) findViewById(R.id.Musicswitch);
-        if(!MyService.isActive()){musicoption.setChecked(false);}
-        musicoption.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View view)
-            {
-                if(!musicoption.isChecked())
-                {
-                    stopService(new Intent((Customize.this), MyService.class));
-                    musicON=false;
-                }
-                else
-                {
-                    startService(new Intent((Customize.this),MyService.class));
-                    musicON=true;
-                }
-            }
-        });
+        continueservice=false;
+
     }
     protected void onResume()
     {
         super.onResume();
-        if(musicON&& !MyService.isActive())
+        if((OptionMenu.musicOn())&&(!MyService.isActive()))
         {
-            startService(new Intent((Customize.this),MyService.class));
+            startService(new Intent((this), MyService.class));
         }
+
     }
     protected void onPause(){
         super.onPause();
-        if (!this.isFinishing()){
-            System.out.println("HOMEBUTTON");
-            stopService(new Intent((Customize.this),MyService.class));
+        if(!continueservice)
+        {
+            stopService(new Intent(this,MyService.class));
         }
+
     }
     protected void onDestroy()
     {
         super.onDestroy();
         System.out.println("Destroyed");
     }
-
-    public static boolean musicOn()
+    public boolean onKeyDown(int KeyCode, KeyEvent event)
     {
-        return musicON;
+        switch(KeyCode)
+        {
+            case KeyEvent.KEYCODE_BACK:
+            {
+                Intent back= new Intent(this,MainActivity.class);
+                startActivity(back);
+                continueservice=true;
+                return true;
+            }
+        }
+        return super.onKeyDown(KeyCode,event);
     }
+
+
 }
