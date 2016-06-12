@@ -118,8 +118,8 @@ public class MainActivity extends Activity {
     public void setButtons()
     {
         Play=(Button) findViewById(R.id.Play);
-        Customization = (Button) findViewById(R.id.Option);
-        Option = (Button) findViewById(R.id.Customize);
+        Customization = (Button) findViewById(R.id.Customize);
+        Option = (Button) findViewById(R.id.OptionMenu);
         optionmenu=false;
 
 
