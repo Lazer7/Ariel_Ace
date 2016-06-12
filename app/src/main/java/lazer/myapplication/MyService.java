@@ -10,7 +10,9 @@ import android.os.IBinder;
  * Created by Jimmy on 5/31/2016.
  */
 public class MyService extends Service {
+    //Music Player for background music
     MediaPlayer music;
+    //variable to see if service is running
     static boolean Running;
 
     /** indicates how to behave if the service is killed */
@@ -27,8 +29,11 @@ public class MyService extends Service {
     /** The service is starting, due to a call to startService() */
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        //find music
         music= MediaPlayer.create(this, R.raw.monody);
+        //set music to loop
         music.setLooping(true);
+        //start service
         music.start();
         Running=true;
         System.out.println("SERVICE STARTING "+ Running);
@@ -60,5 +65,11 @@ public class MyService extends Service {
         Running=false;
         System.out.println("SERVICE DESTROYED");
     }
+
+    /**
+     * return true if service is in use
+     * false if destroyed
+     * @return Running
+     */
     public static boolean isActive(){return Running;}
 }

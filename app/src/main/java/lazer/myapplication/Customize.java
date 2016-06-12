@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Switch;
 
+/**
+ * Ignore this class
+ * This activity will be resolved soon
+ */
 public class Customize extends AppCompatActivity {
     static Switch musicoption;
     static boolean musicON=true;
