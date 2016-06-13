@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+import java.util.logging.Level;
+
 /**
  * Jimmy Chao
  * Project 0
@@ -127,6 +129,14 @@ public class MainActivity extends Activity {
         Customization = (Button) findViewById(R.id.Customize);
         Option = (Button) findViewById(R.id.OptionMenu);
         CustomizationSelected =false;
+        Play.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View view)
+            {
+                Intent LevelSelection=new Intent(MainActivity.this, LevelSelectionScreen.class);
+                startActivity(LevelSelection);
+            }
+        });
         Customization.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view)

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="lazer.myapplication.LevelSelectionScreen"
+    android:background="#5a5a5a">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uranus"
+        android:id="@+id/Uranus"
+        android:background="@drawable/button_design"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:width="150dp"
+        android:textColor="#7d7d7d"
+        android:layout_marginBottom="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Neptune"
+        android:id="@+id/Neptune"
+        android:background="@drawable/button_design"
+        android:width="150dp"
+        android:textColor="#7d7d7d"
+        android:layout_alignTop="@+id/Uranus"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saturn"
+        android:id="@+id/Saturn"
+        android:background="@drawable/button_design"
+        android:width="150dp"
+        android:textColor="#7d7d7d"
+        android:layout_marginBottom="31dp"
+        android:layout_above="@+id/Neptune"
+        android:layout_alignLeft="@+id/Neptune"
+        android:layout_alignStart="@+id/Neptune" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jupiter"
+        android:id="@+id/Jupiter"
+        android:background="@drawable/button_design"
+        android:width="150dp"
+        android:textColor="#7d7d7d"
+        android:layout_alignBottom="@+id/Saturn"
+        android:layout_alignRight="@+id/Uranus"
+        android:layout_alignEnd="@+id/Uranus" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mars"
+        android:id="@+id/Mars"
+        android:background="@drawable/button_design"
+        android:width="150dp"
+        android:textColor="#7d7d7d"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/Mercury"
+        android:layout_alignLeft="@+id/Mercury"
+        android:layout_alignStart="@+id/Mercury" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mercury"
+        android:id="@+id/Mercury"
+        android:background="@drawable/button_design"
+        android:width="150dp"
+        android:textColor="#7d7d7d"
+        android:layout_below="@+id/LevelSelectionLabel"
+        android:layout_alignLeft="@+id/Jupiter"
+        android:layout_alignStart="@+id/Jupiter"
+        android:layout_marginTop="37dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Earth"
+        android:id="@+id/Earth"
+        android:background="@drawable/button_design"
+        android:width="150dp"
+        android:textColor="#7d7d7d"
+        android:layout_alignTop="@+id/Mars"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Venus"
+        android:id="@+id/Venus"
+        android:background="@drawable/button_design"
+        android:width="150dp"
+        android:textColor="#7d7d7d"
+        android:layout_above="@+id/Mars"
+        android:layout_alignLeft="@+id/Earth"
+        android:layout_alignStart="@+id/Earth" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level Select"
+        android:id="@+id/LevelSelectionLabel"
+        android:textSize="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pluto-Gate"
+        android:id="@+id/Pluto"
+        android:background="@drawable/button_design"
+        android:width="150dp"
+        android:textColor="#7d7d7d"
+        android:layout_above="@+id/Saturn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33dp" />
+</RelativeLayout>
