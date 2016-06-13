@@ -4,6 +4,7 @@ package lazer.myapplication;
  * Created by Jimmy on 6/12/2016.
  */
 public class JetFighter {
+<<<<<<< HEAD
     /**Get the activity that has the jetfighter**/
     /**
      * Gets the image from the main activity
@@ -18,4 +19,6 @@ public class JetFighter {
      * from the customize activity
      */
     public void weapontype(){}
+=======
+>>>>>>> refs/remotes/origin/master
 }
