@@ -8,7 +8,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="lazer.myapplication.LevelSelectionScreen"
-    android:background="#5a5a5a">
+    android:background="#5a5a5a"
+    android:orientation="horizontal">
 
     <Button
         android:layout_width="wrap_content"
@@ -118,9 +119,8 @@
         android:text="Level Select"
         android:id="@+id/LevelSelectionLabel"
         android:textSize="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp" />
+        android:layout_below="@+id/BackButton"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -132,5 +132,18 @@
         android:textColor="#7d7d7d"
         android:layout_above="@+id/Saturn"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="33dp" />
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BackButton"
+        android:background="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+        android:width="10dp"
+        android:height="10dp"
+        android:singleLine="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
