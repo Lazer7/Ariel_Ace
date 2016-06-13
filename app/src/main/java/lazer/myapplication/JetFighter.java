@@ -9,7 +9,9 @@ public class JetFighter {
      * Gets the image from the main activity
      * and set default weapon choice
      */
-    public JetFighter(){}
+    public JetFighter(){
+        //make your own parameters
+    }
 
     /**
      * Get the user's choice of weapon
