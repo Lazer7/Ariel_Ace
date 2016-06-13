@@ -5,6 +5,10 @@ import android.os.Bundle;
 
 public class LevelSelectionScreen extends Activity {
 
+    /**
+     * level selection Activity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
