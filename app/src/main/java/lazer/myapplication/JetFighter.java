@@ -17,6 +17,8 @@ public class JetFighter {
      * Get the user's choice of weapon
      * from the customize activity
      */
-    public void weapontype(){}
+    public void weapontype(){
+        //make weapons at the customization menu
+    }
 
 }
