@@ -22,6 +22,7 @@ public class MainActivity extends Activity {
     Button Customization;
     Button Option;
     boolean CustomizationSelected;
+    boolean PlayButtonSelected;
     OptionMenu OptionMenu;
     RelativeLayout Main;
     /**
@@ -78,14 +79,16 @@ public class MainActivity extends Activity {
         System.out.println("onStop");
         //checks to see if option button has been selected
         //this shows that the user has enter the option menu
-        if(!CustomizationSelected)
+        if(!CustomizationSelected&&!PlayButtonSelected)
         {
             //if option menu has not been selected
             //then stop service
             stopService(new Intent((this), MyService.class));
         }
+
         //set option menu to false to reset the check
         CustomizationSelected =false;
+        PlayButtonSelected=false;
 
     }
 
@@ -129,10 +132,12 @@ public class MainActivity extends Activity {
         Customization = (Button) findViewById(R.id.Customize);
         Option = (Button) findViewById(R.id.OptionMenu);
         CustomizationSelected =false;
+        PlayButtonSelected=false;
         Play.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View view)
             {
+                PlayButtonSelected=true;
                 Intent LevelSelection=new Intent(MainActivity.this, LevelSelectionScreen.class);
                 startActivity(LevelSelection);
             }
