@@ -20,6 +20,9 @@ public class Customize extends Activity {
         continueservice=false;
 
     }
+    protected void onStart(){
+        super.onStart();
+    }
     protected void onResume()
     {
         super.onResume();

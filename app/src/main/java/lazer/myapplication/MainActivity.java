@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
-import java.util.logging.Level;
-
 /**
  * Jimmy Chao
  * Project 0
@@ -55,6 +53,11 @@ public class MainActivity extends Activity {
             startService(new Intent((this), MyService.class));
         }
         System.out.println("STARTMAIN");
+    }
+    protected void onResume()
+    {
+        super.onResume();
+
     }
 
     /**
@@ -128,7 +131,7 @@ public class MainActivity extends Activity {
      */
     public void setButtons()
     {
-        Play=(Button) findViewById(R.id.Play);
+        Play= (Button) findViewById(R.id.Play);
         Customization = (Button) findViewById(R.id.Customize);
         Option = (Button) findViewById(R.id.OptionMenu);
         CustomizationSelected =false;
@@ -138,7 +141,7 @@ public class MainActivity extends Activity {
             public void onClick(View view)
             {
                 PlayButtonSelected=true;
-                Intent LevelSelection=new Intent(MainActivity.this, LevelSelectionScreen.class);
+                Intent LevelSelection = new Intent(MainActivity.this, LevelSelectionScreen.class);
                 startActivity(LevelSelection);
             }
         });
