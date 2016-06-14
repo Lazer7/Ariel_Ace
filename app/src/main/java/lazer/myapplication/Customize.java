@@ -26,6 +26,7 @@ public class Customize extends Activity {
     protected void onResume()
     {
         //hello
+        //hello2
         super.onResume();
         if((OptionMenu.musicOn())&&(!MyService.isActive()))
         {
