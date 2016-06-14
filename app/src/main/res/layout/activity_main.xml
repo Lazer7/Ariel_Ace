@@ -83,5 +83,5 @@
         android:layout_centerHorizontal="true"
         android:background="#3b51d1" />
 
-</RelativeLayout>
+    </RelativeLayout>
 </RelativeLayout>
