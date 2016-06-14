@@ -20,7 +20,7 @@ public class Customize extends Activity {
         continueservice=false;
 
     }
-    protected void onResume()
+    protected void onResume() // WHAT NANTATO
     {
         super.onResume();
         if((OptionMenu.musicOn())&&(!MyService.isActive()))
