@@ -17,7 +17,7 @@ public class Customize extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.customization);
-        continueservice=false;
+        continueservice=false; //WHY YOU NO WORK
 
     }
     protected void onStart(){
