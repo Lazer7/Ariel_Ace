@@ -20,7 +20,7 @@ public class Customize extends Activity {
         continueservice=false;
 
     }
-    protected void onResume() // TEST SEE THIS OR ELSA
+    protected void onResume() // TEST SEE THIS OR ELSA NOOOOOOOOOOOOOOO
     {
         super.onResume();
         if((OptionMenu.musicOn())&&(!MyService.isActive()))
