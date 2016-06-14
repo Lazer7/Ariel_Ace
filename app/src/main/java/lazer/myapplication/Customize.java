@@ -21,7 +21,7 @@ public class Customize extends Activity {
 
     }
     protected void onStart(){
-        super.onStart();
+        super.onStart(); // herrro
     }
     protected void onResume()
     {
