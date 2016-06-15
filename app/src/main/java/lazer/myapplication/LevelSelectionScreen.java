@@ -59,6 +59,8 @@ public class LevelSelectionScreen extends Activity {
             switch(v.getId())
             {
                 case R.id.Mercury:
+                    Intent mercury= new Intent(LevelSelectionScreen.this,Mercury_Game.class);
+                    startActivity(mercury);
                     System.out.println("Coming soon");
                     break;
                 case R.id.Venus:
