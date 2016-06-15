@@ -29,7 +29,8 @@
         <service android:name=".MyService" />
 
         <activity android:name=".Customize" />
-        <activity android:name=".LevelSelectionScreen"></activity>
+        <activity android:name=".LevelSelectionScreen" />
+        <activity android:name=".Mercury_Game"></activity>
     </application>
 
 </manifest>
