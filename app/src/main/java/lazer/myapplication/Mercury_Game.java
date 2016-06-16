@@ -51,12 +51,14 @@ public class Mercury_Game extends Activity {
         ImageView bullet= new ImageView(this);
         bullet.setImageResource(R.drawable.weapon_type);
         RelativeLayout background= (RelativeLayout) findViewById(R.id.MercuryRelativeLayout);
-
         RelativeLayout.LayoutParams measurements= new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
         measurements.addRule(RelativeLayout.ABOVE,R.id.UserShip);
+        measurements.addRule(RelativeLayout.LEFT_OF,R.id.UserShip);
         //measurements.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         background.addView(bullet,measurements);
-
+        FiringMode thread= new FiringMode(bullet);
+        Thread x= new Thread(thread);
+        x.start();
 
     }
 }

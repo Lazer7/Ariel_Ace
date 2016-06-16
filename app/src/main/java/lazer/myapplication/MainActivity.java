@@ -141,7 +141,7 @@ public class MainActivity extends Activity {
             public void onClick(View view)
             {
                 PlayButtonSelected=true;
-                Intent LevelSelection = new Intent(MainActivity.this, LevelSelectionScreen.class);
+                Intent LevelSelection = new Intent(MainActivity.this, Mercury_Game.class);
                 startActivity(LevelSelection);
             }
         });
