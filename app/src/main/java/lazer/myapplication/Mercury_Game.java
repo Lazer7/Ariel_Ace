@@ -5,14 +5,14 @@ import android.graphics.PointF;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 
 public class Mercury_Game extends Activity {
-    int width;
-    int height;
     ImageView ship;
-    private LayoutParams layout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +28,7 @@ public class Mercury_Game extends Activity {
             PointF start= new PointF();
             public boolean onTouch(View view, MotionEvent event)
             {
-                layout = (LayoutParams) ship.getLayoutParams();
+
                 switch(event.getAction())
                 {
                     case MotionEvent.ACTION_MOVE:
@@ -36,6 +36,7 @@ public class Mercury_Game extends Activity {
                         ship.setX((int)(start.x+store.x));
                         ship.setY((int)(start.y)+store.y);
                         start=new PointF(ship.getX(),ship.getY());
+                        attackMode();
                         break;
                     default:break;
                 }
@@ -44,6 +45,18 @@ public class Mercury_Game extends Activity {
             }
 
         });
+    }
+    public void attackMode()
+    {
+        ImageView bullet= new ImageView(this);
+        bullet.setImageResource(R.drawable.weapon_type);
+        RelativeLayout background= (RelativeLayout) findViewById(R.id.MercuryRelativeLayout);
+
+        RelativeLayout.LayoutParams measurements= new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
+        measurements.addRule(RelativeLayout.ABOVE,R.id.UserShip);
+        //measurements.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        background.addView(bullet,measurements);
+
 
     }
 }
