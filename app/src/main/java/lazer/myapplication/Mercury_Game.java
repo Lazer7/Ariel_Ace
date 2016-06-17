@@ -32,6 +32,10 @@ public class Mercury_Game extends Activity {
         //and ship's firing mode
         setButtons();
     }
+    protected void onStart(){
+        super.onStart();
+        attackMode();
+    }
     protected void setButtons()
     {
         //find the ship in the xml layout
@@ -57,7 +61,6 @@ public class Mercury_Game extends Activity {
                         ship.setY((int)(start.y)+store.y);
                         start=new PointF(ship.getX(),ship.getY());
                         //method to fire bullets
-                        attackMode();
                         break;
                     default:break;
                 }
@@ -69,22 +72,24 @@ public class Mercury_Game extends Activity {
     }
     public void attackMode()
     {
-        //make a bullet image
-        ImageView bullet= new ImageView(this);
-        //get weapon type
-        bullet.setImageResource(R.drawable.weapon_type);
-        //get the panel the ship is in
-        RelativeLayout background= (RelativeLayout) findViewById(R.id.MercuryRelativeLayout);
-        //set the bullet's layout
-        RelativeLayout.LayoutParams measurements= new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
-        measurements.addRule(RelativeLayout.ABOVE,R.id.UserShip);
-        measurements.addRule(RelativeLayout.LEFT_OF,R.id.UserShip);
-        //measurements.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-        background.addView(bullet,measurements);
-        FiringMode thread= new FiringMode(bullet);
-        //thread that moves the bullet infinily
-        Thread x= new Thread(thread);
-        x.start();
-
+        for(int i=0; i<10; i++) {
+            //make a bullet image
+            ImageView bullet = new ImageView(this);
+            System.out.println("new bullet made");
+            //get weapon type
+            bullet.setImageResource(R.drawable.weapon_type);
+            //get the panel the ship is in
+            RelativeLayout background = (RelativeLayout) findViewById(R.id.MercuryRelativeLayout);
+            //set the bullet's layout
+            RelativeLayout.LayoutParams measurements = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+            measurements.addRule(RelativeLayout.ABOVE, R.id.UserShip);
+            measurements.addRule(RelativeLayout.LEFT_OF, R.id.UserShip);
+            //measurements.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+            background.addView(bullet, measurements);
+            FiringMode thread = new FiringMode(bullet);
+            //thread that moves the bullet infinily
+            Thread x = new Thread(thread);
+            x.start();
+        }
     }
 }
