@@ -13,8 +13,8 @@ public class FiringMode implements Runnable {
     public void run()
     {
         for(int i=0; i<100; i++) {
-            float startposition = bullet.getY();
-            bullet.setY(startposition - 10);
+            float startPosition = bullet.getY();
+            bullet.setY(startPosition - 10);
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {

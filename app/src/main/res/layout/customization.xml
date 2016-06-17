@@ -10,8 +10,6 @@
     tools:context=".Customize"
     android:background="#e30707">
 
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,5 +19,24 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="39dp"
         android:textSize="50dp" />
+
+    <LinearLayout
+        android:layout_width="75dp"
+        android:layout_height="400dp"
+        android:layout_below="@+id/Customization"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:id="@+id/weaponSelect">
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/weaponSelect"
+        android:layout_alignLeft="@+id/Customization"
+        android:layout_alignStart="@+id/Customization"
+        android:layout_toLeftOf="@+id/weaponSelect"
+        android:layout_toStartOf="@+id/weaponSelect"
+        android:id="@+id/shipSelect"></RelativeLayout>
 
 </RelativeLayout>
