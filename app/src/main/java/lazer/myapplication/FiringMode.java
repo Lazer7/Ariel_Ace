@@ -22,5 +22,6 @@ public class FiringMode implements Runnable {
                 e.printStackTrace();
             }
         }
+        bullet.setImageDrawable(null);
     }
 }
