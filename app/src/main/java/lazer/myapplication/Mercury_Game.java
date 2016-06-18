@@ -17,7 +17,7 @@ import android.widget.RelativeLayout.LayoutParams;
 public class Mercury_Game extends Activity {
     /**User Ship type**/
     ImageView ship;
-
+    JetFighter fighter;
     /**
      * creating the level
      * sets the layout and buttons
@@ -40,7 +40,7 @@ public class Mercury_Game extends Activity {
         //find the ship in the xml layout
         ship= (ImageView) findViewById(R.id.UserShip);
         //set onclicklistener
-
+        fighter= new JetFighter(this);
         ship.setOnTouchListener(new View.OnTouchListener()
         {
             //the location where the user dragged the image
@@ -62,7 +62,7 @@ public class Mercury_Game extends Activity {
                         break;
                     case MotionEvent.ACTION_DOWN:
                         System.out.println("Here");
-                        attackMode(start);
+                        fighter.attackMode(start);
                         break;
                     default:
                         break;
@@ -73,7 +73,7 @@ public class Mercury_Game extends Activity {
         });
 
     }
-    public void attackMode(PointF start)
+    /*public void attackMode(PointF start)
     {
         ImageView bullet = new ImageView(this);
         System.out.println("new bullet made");
@@ -90,5 +90,5 @@ public class Mercury_Game extends Activity {
         Thread x = new Thread(thread);
         x.start();
 
-    }
+    }*/
 }
