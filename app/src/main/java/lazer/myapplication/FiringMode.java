@@ -12,6 +12,7 @@ public class FiringMode implements Runnable {
     }
     public void run()
     {
+        System.out.println("here");
         for(int i=0; i<100; i++) {
             float startPosition = bullet.getY();
             bullet.setY(startPosition - 10);
