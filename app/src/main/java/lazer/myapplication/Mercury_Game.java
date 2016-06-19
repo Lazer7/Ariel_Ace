@@ -38,40 +38,13 @@ public class Mercury_Game extends Activity {
     protected void setButtons()
     {
         //find the ship in the xml layout
-        ship= (ImageView) findViewById(R.id.UserShip);
+        //ship= (ImageView) findViewById(R.id.UserShip);
         //set onclicklistener
         fighter= new JetFighter(this);
 
-        ship.setOnTouchListener(new View.OnTouchListener()
-        {
-            //the location where the user dragged the image
-            PointF drag = new PointF();
-            //the location where the image started
-            PointF start= new PointF();
-            public boolean onTouch(View view, MotionEvent event) {
-                //attackMode(start);
-                fighter.shoot(start);
-                switch (event.getAction()) {
-                    //when the user moves finger on the image
-                    case MotionEvent.ACTION_MOVE:
-                        //gets the new location where the finger was dragged
-                        PointF store = new PointF(event.getX() - drag.x, event.getY() - drag.y);
-                        //set the image location to where it was dragged
-                        ship.setX((int) (start.x + store.x));
-                        ship.setY((int) (start.y) + store.y);
-                        start = new PointF(ship.getX(), ship.getY());
-                        //method to fire bullets
-                       // attackMode(start);
-                        break;
-                }
-
-                return true;
-            }
-
-        });
-
     }
-    int count=0;
+    //firing mode reference
+ /*
     public void attackMode(PointF start)
     {
         ImageView bullet = new ImageView(this);
@@ -90,4 +63,5 @@ public class Mercury_Game extends Activity {
         x.start();
         System.out.println(count++);
     }
+    */
 }

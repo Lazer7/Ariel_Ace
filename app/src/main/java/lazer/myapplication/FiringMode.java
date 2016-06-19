@@ -18,16 +18,14 @@ public class FiringMode implements Runnable {
     public void run()
     {
         System.out.println("here");
-        for(int i=0; i<100; i++) {
-
-
+        for(int i=0; i<50; i++) {
             try {
                 Thread.sleep(100);
                 level.runOnUiThread(new Runnable()
                 {
                     public void run(){
                         float startPosition = bullet.getY();
-                        bullet.setY(startPosition - 100);
+                        bullet.setY(startPosition - 75);
                     }
                 });
             } catch (InterruptedException e) {
