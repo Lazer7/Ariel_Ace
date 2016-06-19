@@ -27,12 +27,9 @@ public class FiringMode implements Runnable {
                 {
                     public void run(){
                         float startPosition = bullet.getY();
-                        bullet.setY(startPosition - 10);
+                        bullet.setY(startPosition - 100);
                     }
                 });
-                {
-
-                }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -40,7 +40,7 @@ public class Mercury_Game extends Activity {
         //find the ship in the xml layout
         ship= (ImageView) findViewById(R.id.UserShip);
         //set onclicklistener
-       // fighter= new JetFighter(this);
+        fighter= new JetFighter(this);
 
         ship.setOnTouchListener(new View.OnTouchListener()
         {
@@ -49,8 +49,8 @@ public class Mercury_Game extends Activity {
             //the location where the image started
             PointF start= new PointF();
             public boolean onTouch(View view, MotionEvent event) {
-                attackMode(start);
-                MotionEvent.
+                //attackMode(start);
+                fighter.shoot(start);
                 switch (event.getAction()) {
                     //when the user moves finger on the image
                     case MotionEvent.ACTION_MOVE:
@@ -62,11 +62,6 @@ public class Mercury_Game extends Activity {
                         start = new PointF(ship.getX(), ship.getY());
                         //method to fire bullets
                        // attackMode(start);
-                        break;
-                    case MotionEvent.ACTION_DOWN:
-
-                        break;
-                    default:attackMode(start);
                         break;
                 }
 
