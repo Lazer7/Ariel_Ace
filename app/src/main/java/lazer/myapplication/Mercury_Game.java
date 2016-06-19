@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 
+import java.util.Random;
+
 /**
  * Mercury Level
  * Level 1 for the player
@@ -18,6 +20,7 @@ public class Mercury_Game extends Activity {
     /**User Ship type**/
     ImageView ship;
     JetFighter fighter;
+    Enemy_1[] attackers=new Enemy_1[400];
     /**
      * creating the level
      * sets the layout and buttons
@@ -30,19 +33,16 @@ public class Mercury_Game extends Activity {
         //sets buttons
         //set's ship movement
         //and ship's firing mode
-        setButtons();
+        JetFighter fighter= new JetFighter(this);
+
     }
     protected void onResume(){
         super.onResume();
+        Enemy_1 x= new Enemy_1(this);
+        Thread go= new Thread(x);
+        go.start();
     }
-    protected void setButtons()
-    {
-        //find the ship in the xml layout
-        //ship= (ImageView) findViewById(R.id.UserShip);
-        //set onclicklistener
-        fighter= new JetFighter(this);
 
-    }
     //firing mode reference
  /*
     public void attackMode(PointF start)
