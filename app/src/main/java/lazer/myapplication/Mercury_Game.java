@@ -41,6 +41,7 @@ public class Mercury_Game extends Activity {
         ship= (ImageView) findViewById(R.id.UserShip);
         //set onclicklistener
        // fighter= new JetFighter(this);
+
         ship.setOnTouchListener(new View.OnTouchListener()
         {
             //the location where the user dragged the image
@@ -48,7 +49,8 @@ public class Mercury_Game extends Activity {
             //the location where the image started
             PointF start= new PointF();
             public boolean onTouch(View view, MotionEvent event) {
-
+                attackMode(start);
+                MotionEvent.
                 switch (event.getAction()) {
                     //when the user moves finger on the image
                     case MotionEvent.ACTION_MOVE:
@@ -59,20 +61,22 @@ public class Mercury_Game extends Activity {
                         ship.setY((int) (start.y) + store.y);
                         start = new PointF(ship.getX(), ship.getY());
                         //method to fire bullets
+                       // attackMode(start);
                         break;
                     case MotionEvent.ACTION_DOWN:
-                        System.out.println("Here");
-                        attackMode(start);
+
                         break;
-                    default:
+                    default:attackMode(start);
                         break;
                 }
 
                 return true;
             }
+
         });
 
     }
+    int count=0;
     public void attackMode(PointF start)
     {
         ImageView bullet = new ImageView(this);
@@ -85,10 +89,10 @@ public class Mercury_Game extends Activity {
         bullet.setY(start.y);
         //measurements.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         background.addView(bullet);
-        FiringMode thread = new FiringMode(bullet);
+        FiringMode thread = new FiringMode(bullet,this);
         //thread that moves the bullet infinily
         Thread x = new Thread(thread);
         x.start();
-
+        System.out.println(count++);
     }
 }

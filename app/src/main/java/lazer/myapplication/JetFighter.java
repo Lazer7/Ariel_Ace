@@ -41,7 +41,7 @@ public class JetFighter {
         bullet.setY(start.y);
         //measurements.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         background.addView(bullet);
-        FiringMode thread = new FiringMode(bullet);
+        FiringMode thread = new FiringMode(bullet,level);
         //thread that moves the bullet infinily
         Thread x = new Thread(thread);
         x.start();
